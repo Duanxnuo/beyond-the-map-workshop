@@ -9,7 +9,7 @@ The exact workshop day, invited speaker, programme committee, submission portal,
 Edit [`content.md`](./content.md) to change the main text, dates, organisers, schedule, and FAQ.
 
 - The first `#` line controls the website title. The next two nonempty lines are the subtitle and event detail below the title.
-- `Orbit label 1:` through `Orbit label 4:` change the short phrases on the outer and inner circles.
+- `Orbit label 1:` and `Orbit label 2:` change the short labels beside the animated circles.
 - Each `##` heading identifies a section. Keep the heading names because the navigation uses them.
 - Tables use vertical bars (`|`). Edit or add rows below each header and separator.
 - `**text**` makes text bold. A blank line starts a new paragraph.

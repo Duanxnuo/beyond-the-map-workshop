@@ -4,13 +4,9 @@
 
 Half-day workshop at FSE 2027 · Shenzhen, China · July 2027
 
-Orbit label 1: AGENT-NATIVE WORKFLOWS
+Orbit label 1: PROCESS / 01
 
-Orbit label 2: PROCESS-LEVEL EVIDENCE
-
-Orbit label 3: SPECIFY INTENT
-
-Orbit label 4: VERIFY AT SCALE
+Orbit label 2: EVIDENCE / 02
 
 ## About
 

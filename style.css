@@ -123,12 +123,3 @@ html{scroll-snap-type:none}
 /* Keep decorative orbit labels clear of the longer RESHAPE subtitle on phones. */
 @media(max-width:760px){.orbit-label{display:none}}
 
-/* Two levels of labels map the workshop's process questions onto the orbit. */
-.orbit-label{white-space:nowrap;line-height:1.25;text-transform:uppercase}
-.orbit-label.outer{font-size:11px;font-weight:600;letter-spacing:.1em;color:#f5e9f7;opacity:.94;padding:5px 9px;box-shadow:0 0 0 1px rgba(213,195,222,.22)}
-.orbit-label.one{top:8%;right:-2%}
-.orbit-label.two{left:1%;bottom:13%}
-.orbit-label.inner{font-size:10px;font-weight:600;letter-spacing:.14em;color:#e4d5ea;opacity:.88;padding:2px 6px}
-.orbit-label.three{top:35%;left:50%;transform:translate(-50%,-50%)}
-.orbit-label.four{bottom:35%;left:50%;transform:translate(-50%,50%)}
-@media(max-width:760px){.orbit-label{display:none}}
