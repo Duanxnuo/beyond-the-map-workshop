@@ -52,3 +52,53 @@ if('IntersectionObserver' in window){
   },{rootMargin:'-22% 0px -55% 0px'});
   document.querySelectorAll('main .section').forEach(section=>sectionObserver.observe(section));
 }
+
+// Align only to the next boundary in the direction of travel. This leaves
+// long sections free to scroll naturally and avoids a backward jump on stop.
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const sections=[...document.querySelectorAll('main .section')];
+  let lastY=window.scrollY;
+  let direction=0;
+  let lastInput=0;
+  let settleTimer;
+  let aligning=false;
+  let touchY=0;
+
+  window.addEventListener('wheel',event=>{
+    if(event.deltaY){direction=Math.sign(event.deltaY);lastInput=performance.now();aligning=false;}
+  },{passive:true});
+  window.addEventListener('touchstart',event=>{touchY=event.touches[0]?.clientY??0;aligning=false;},{passive:true});
+  window.addEventListener('touchmove',event=>{
+    const nextY=event.touches[0]?.clientY??touchY;
+    if(nextY!==touchY){direction=Math.sign(touchY-nextY);lastInput=performance.now();touchY=nextY;}
+  },{passive:true});
+  window.addEventListener('keydown',event=>{
+    if(['ArrowDown','PageDown',' '].includes(event.key)){direction=1;lastInput=performance.now();aligning=false;}
+    if(['ArrowUp','PageUp'].includes(event.key)){direction=-1;lastInput=performance.now();aligning=false;}
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{lastInput=0;}));
+
+  const alignNearbyBoundary=()=>{
+    if(aligning||!direction||performance.now()-lastInput>900)return;
+    const y=window.scrollY;
+    const header=document.querySelector('.site-header')?.getBoundingClientRect().height??0;
+    const threshold=innerWidth<=760?48:64;
+    const boundaries=sections.map(section=>section.getBoundingClientRect().top+y-header);
+    const ahead=boundaries.filter(boundary=>direction>0?boundary>y+2:boundary<y-2);
+    if(!ahead.length)return;
+    const target=direction>0?Math.min(...ahead):Math.max(...ahead);
+    if(Math.abs(target-y)>threshold)return;
+    aligning=true;
+    lastInput=0;
+    window.scrollTo({top:target,behavior:'smooth'});
+    setTimeout(()=>{aligning=false;lastY=window.scrollY;},550);
+  };
+
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    if(!aligning&&performance.now()-lastInput<900&&Math.abs(y-lastY)>1)direction=Math.sign(y-lastY);
+    lastY=y;
+    clearTimeout(settleTimer);
+    settleTimer=setTimeout(alignNearbyBoundary,160);
+  },{passive:true});
+}

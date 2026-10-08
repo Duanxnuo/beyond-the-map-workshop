@@ -106,3 +106,8 @@ html{scroll-snap-type:y proximity}
 @media(max-width:760px){.section-head{top:66px}.section-copy{padding:0}}
 @media(max-width:760px) and (prefers-reduced-motion:no-preference){html{scroll-snap-type:y proximity}}
 @media(prefers-reduced-motion:reduce){html{scroll-snap-type:none}}
+
+/* Directional boundary alignment is handled in script.js. */
+html{scroll-snap-type:none}
+.section{scroll-snap-align:none;padding:72px 0}
+@media(max-width:760px){.section{padding:55px 0}}
