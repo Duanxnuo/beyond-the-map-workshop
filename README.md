@@ -1,47 +1,45 @@
-# Beyond the Map Workshop 网站
+# Beyond the Map Workshop Website
 
-这是一个**示例**计算机学术 Workshop 网站，采用莫兰迪配色 `#504657`、`#7D726E`、`#D5C3DE`、`#FAEEEE` 与 JetBrains Mono 字体。当前会议、人物、日期、地点和征稿信息都是占位内容，并不代表真实会议公告。
+An **illustrative** academic workshop website using the colors `#504657`, `#7D726E`, `#D5C3DE`, and `#FAEEEE`. Typography uses Manrope for headings, DM Sans for body copy, and JetBrains Mono for dates, labels, and numbering.
 
-## 最简单的改内容方法
+The event, people, dates, venue, and submission details are placeholders. This is not an official conference announcement.
 
-只编辑 [`content.md`](./content.md)。它包含网站的所有主要文字、日期、讲者、组织者和日程。
+## Edit the website content
 
-- `# Beyond the Map`：网站标题；紧接的两行分别是副标题和日期地点。
-- `## About` 等二级标题：对应网站各板块。建议保留这些英文标题，页面导航依靠它们识别板块。
-- `| ... |` 表格：直接改每行两条竖线之间的内容。例如日程、讲者、重要日期都在表格里。
-- `**文字**`：表示加粗。空行分开段落。
-- 可以增删表格中的内容行，但保留表头和第二行的 `---` 分隔线。
+Edit only [`content.md`](./content.md) for the main text, dates, speakers, organizers, and program.
 
-正式公开前，请至少修改页面顶部的示例提示、会议名称和归属、所有重要日期、投稿入口、嘉宾与组织者、会场、联系邮箱。**不要只删掉“示例”字样却保留虚构人物或未确认的信息。**
+- `# Beyond the Map` is the website title. The next two nonempty lines are the subtitle and event details.
+- Each `##` heading identifies a section. Keep these heading names unchanged because the navigation uses them.
+- Tables use vertical bars (`|`). Edit or add rows beneath the header and `---` separator.
+- `**text**` makes text bold. Blank lines separate paragraphs.
 
-## 本地预览
+Before using the site as a real announcement, replace the placeholder notice, event affiliation, dates, submission portal, speakers, organizers, venue, and contact details. Verify that listed people have agreed to appear.
 
-电脑安装 Node.js（建议 20 或更新版本）后，在本文件夹运行：
+## Preview locally
+
+With Node.js 20 or newer installed, run:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-打开命令行显示的本地网址。改完 `content.md` 后重新执行 `npm run build`，再刷新页面。项目没有第三方构建依赖；网页字体需要网络连接，离线时会使用等宽备用字体。
+Open the local address shown in the terminal. After editing `content.md`, run `npm run build` again and refresh the page. The build has no third-party dependencies. Web fonts require an internet connection; fallback fonts are provided.
 
-## 部署到 GitHub Pages
+## GitHub Pages
 
-1. 在 GitHub 新建一个仓库，将本文件夹的所有文件上传到仓库根目录（包括 `.github/workflows/pages.yml`）。
-2. 打开仓库 **Settings → Pages**，在 **Build and deployment** 中将 **Source** 设为 **GitHub Actions**。
-3. 推送到 `main` 分支后，等待 **Actions** 中的 “Deploy Workshop site” 完成。页面会显示网址，通常是 `https://用户名.github.io/仓库名/`。
-4. 以后直接在 GitHub 网页上打开 `content.md`，点铅笔修改并提交；部署会自动重新运行。
+The site is published at [duanxnuo.github.io/beyond-the-map-workshop](https://duanxnuo.github.io/beyond-the-map-workshop/). A commit to `main` runs the workflow in [`.github/workflows/pages.yml`](./.github/workflows/pages.yml), which builds and deploys the site automatically.
 
-如果默认分支不是 `main`，请相应修改 `.github/workflows/pages.yml` 的分支名称。发布前先将占位内容替换并核实。
+For a new repository, upload these files to its root, including `.github/workflows/pages.yml`. In **Settings → Pages**, set **Source** to **GitHub Actions**. If the default branch is not `main`, update the workflow trigger.
 
-## 文件说明
+## Files
 
-- `content.md`：网站内容，日常只需编辑此文件。
-- `style.css`：颜色、排版、响应式布局和动画。
-- `script.js`：手机菜单、滚动显示和导航高亮。
-- `index.template.html`、`build.mjs`：把 Markdown 组装成网页。
-- `dist/`：运行构建后生成的网站文件。GitHub Actions 会自动生成并部署。
+- `content.md`: text and structured content; the main file to edit.
+- `style.css`: palette, typography, responsive layout, and motion.
+- `script.js`: mobile navigation and scroll behavior.
+- `index.template.html` and `build.mjs`: generate the finished page from Markdown.
+- `dist/`: generated site files, recreated by the deployment workflow.
 
-## 栏目参考
+## Information architecture
 
-信息架构参考了 [NeurIPS 2025 workshop 征集说明](https://neurips.cc/Conferences/2025/CallForWorkshops)、[NeurIPS 2025 workshop 指南](https://neurips.cc/Conferences/2025/CallForWorkshopsGuidance) 和 [ICML 2025 workshop 征集说明](https://icml.cc/Conferences/2025/CallForWorkshops)。它们强调清楚公布研究主题、投稿与评审安排、日期、组织者和现场活动。本项目的具体会议内容全部为示例，没有借用这些会议的官方身份。
+The section structure was informed by the [NeurIPS 2025 workshop call](https://neurips.cc/Conferences/2025/CallForWorkshops), [NeurIPS 2025 workshop guidance](https://neurips.cc/Conferences/2025/CallForWorkshopsGuidance), and [ICML 2025 workshop call](https://icml.cc/Conferences/2025/CallForWorkshops). The fictional event content does not claim affiliation with those conferences.
