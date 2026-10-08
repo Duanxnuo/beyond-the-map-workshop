@@ -12,7 +12,7 @@ const subtitle = heroLines[1] ?? '';
 const detail = heroLines[2] ?? '';
 const notice = heroLines.find(line => line.startsWith('> '))?.slice(2) ?? '';
 const ids = {'About':'about','Topics':'topics','Important Dates':'dates','Call for Papers':'cfp','Submission Guidelines':'submission','Speakers':'speakers','Organizers':'organizers','Program':'program','Venue':'venue','FAQ':'faq','Contact':'contact'};
-const labels = {'About':'简介','Topics':'主题','Important Dates':'日期','Call for Papers':'征稿','Submission Guidelines':'投稿','Speakers':'讲者','Organizers':'组织者','Program':'日程','Venue':'地点','FAQ':'常见问题','Contact':'联系'};
+const labels = {'About':'About','Topics':'Topics','Important Dates':'Important Dates','Call for Papers':'Call for Papers','Submission Guidelines':'Submission Guidelines','Speakers':'Speakers','Organizers':'Organizers','Program':'Program','Venue':'Venue','FAQ':'FAQ','Contact':'Contact'};
 function render(lines) {
   const out=[];
   for(let i=0;i<lines.length;){
