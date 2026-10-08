@@ -1,8 +1,8 @@
 # RESHAPE 2027 workshop website
 
-The website presents the RESHAPE 2027 workshop proposal for FSE 2027. It uses the existing Morandi palette and responsive layout, with JetBrains Mono for dates and interface labels.
+The website presents RESHAPE 2027, a workshop at FSE 2027. It uses the existing Morandi palette and responsive layout, with JetBrains Mono for dates and interface labels.
 
-The workshop has been proposed; approval, exact workshop date, invited speaker, programme committee, submission portal, contact address, room, and final publication arrangements have not been confirmed in the proposal. Keep the proposal-status notice until those details are official.
+The exact workshop day, invited speaker, programme committee, submission portal, contact address, and room will be added when announced.
 
 ## Edit the website content
 
@@ -14,7 +14,7 @@ Edit [`content.md`](./content.md) to change the main text, dates, organisers, sc
 - Tables use vertical bars (`|`). Edit or add rows below each header and separator.
 - `**text**` makes text bold. A blank line starts a new paragraph.
 
-The header and footer use the title and subtitle from `content.md`. The proposal-status notice and search description are in [`index.template.html`](./index.template.html); update them when the workshop is approved. The palette and motion are in [`style.css`](./style.css).
+The header and footer use the title and subtitle from `content.md`. The search description is in [`index.template.html`](./index.template.html). The palette and motion are in [`style.css`](./style.css).
 
 ## Preview locally
 
@@ -34,7 +34,7 @@ The existing site is published at [duanxnuo.github.io/beyond-the-map-workshop](h
 ## Files
 
 - `content.md`: text and structured content; the main file to edit.
-- `index.template.html`: page structure, metadata, and proposal-status notice.
+- `index.template.html`: page structure and metadata.
 - `style.css`: palette, typography, responsive layout, and motion.
 - `script.js`: mobile navigation and scrolling behavior.
 - `build.mjs`: generates the finished page from Markdown.
