@@ -114,8 +114,8 @@ html{scroll-snap-type:none}
 
 /* Oversized section numbers sit behind their titles like quiet watermarks. */
 .section-head{position:sticky;top:110px;align-self:start;min-height:190px;isolation:isolate}
-.section-number{position:absolute;top:-18px;left:-13px;z-index:0;font-family:'Manrope',sans-serif;font-size:clamp(7rem,12vw,11rem);font-weight:800;line-height:1;letter-spacing:-.13em;color:var(--muted);opacity:.26;transform:rotate(-8deg);transform-origin:bottom left;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .7s ease;pointer-events:none;user-select:none}
+.section-number{position:absolute;top:-18px;left:-13px;z-index:0;font-family:'Manrope',sans-serif;font-size:clamp(7rem,12vw,11rem);font-weight:800;line-height:1;letter-spacing:-.13em;color:var(--ink);opacity:.15;transform:rotate(-8deg);transform-origin:bottom left;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .7s ease;pointer-events:none;user-select:none}
 .section-head h2{position:relative;z-index:1;margin:76px 0 0 14px;overflow-wrap:anywhere}
-.section.is-active .section-number{opacity:.36;transform:translateY(5px) rotate(-6deg)}
+.section.is-active .section-number{opacity:.22;transform:translateY(5px) rotate(-6deg)}
 @media(max-width:760px){.section-head{top:66px;min-height:130px;padding:0 0 12px}.section-number{top:-12px;left:-5px;font-size:clamp(6rem,24vw,8rem)}.section-head h2{margin:45px 0 0 12px}}
 @media(prefers-reduced-motion:reduce){.section-number{transition:none}}
