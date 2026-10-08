@@ -79,3 +79,21 @@ body,.site-header,.nav-dropdown,.footer{background:#fff;color:var(--ink)}
   .section-copy{max-height:none;overflow:visible;padding:0}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-snap-type:none}.section-head h2{transition:none}}
+
+/* Keep the opening and closing panels in the original deep Morandi tone. */
+.hero,.footer{background:var(--ink);color:#FAEEEE}
+.hero-grid{opacity:.08;background-image:linear-gradient(to right,#fff 1px,transparent 1px),linear-gradient(to bottom,#fff 1px,transparent 1px)}
+.hero-kicker{background:var(--lilac);color:var(--ink)}
+.hero-subtitle{color:var(--lilac)}
+.hero-detail{color:#FAEEEE}
+.primary{background:var(--lilac);border-color:var(--lilac);color:var(--ink)}
+.primary:hover{background:#e3d5e9}
+.secondary{color:#FAEEEE;border-color:var(--lilac)}
+.secondary:hover{background:rgba(213,195,222,.13)}
+.orbit{border-color:rgba(213,195,222,.52)}
+.orbit-c{border-color:var(--lilac)}
+.orbit-center,.orbit-label,.hero-bottom{color:var(--lilac)}
+.orbit-label{background:var(--ink)}
+.footer p,.footer small{color:var(--lilac)}
+.footer small{border-color:rgba(250,238,238,.2)}
+.footer-star{color:var(--lilac)}
