@@ -104,4 +104,5 @@ html{scroll-snap-type:y proximity}
 .section-head{position:sticky;top:110px;align-self:start}
 .section-copy{max-height:none;overflow:visible;overscroll-behavior:auto;padding:7px 0 8px;scrollbar-width:auto}
 @media(max-width:760px){.section-head{top:66px}.section-copy{padding:0}}
+@media(max-width:760px) and (prefers-reduced-motion:no-preference){html{scroll-snap-type:y proximity}}
 @media(prefers-reduced-motion:reduce){html{scroll-snap-type:none}}
