@@ -42,7 +42,7 @@ const nav=navigationGroups.map(group=>{
   }).join('');
   return `<details class="nav-group"><summary>${group.label}</summary><div class="nav-dropdown">${links}</div></details>`;
 }).join('');
-const body=sections.map(s=>`<section id="${s.id}" class="section reveal"><div class="section-head"><span class="eyebrow">${String(s.index+1).padStart(2,'0')} / ${escape(s.name)}</span><h2>${escape(s.label)}</h2></div><div class="section-copy" tabindex="0" aria-label="${escape(s.label)} content">${s.html}</div></section>`).join('\n');
+const body=sections.map(s=>`<section id="${s.id}" class="section reveal"><div class="section-head"><span class="eyebrow">${String(s.index+1).padStart(2,'0')} / ${escape(s.name)}</span><h2>${escape(s.label)}</h2></div><div class="section-copy">${s.html}</div></section>`).join('\n');
 const html=fs.readFileSync('index.template.html','utf8').replaceAll('{{TITLE}}',escape(title)).replaceAll('{{SUBTITLE}}',inline(subtitle)).replaceAll('{{DETAIL}}',inline(detail)).replaceAll('{{NAV}}',nav).replaceAll('{{SECTIONS}}',body);
 fs.mkdirSync('dist',{recursive:true});fs.writeFileSync('dist/index.html',html);for(const file of ['style.css','script.js'])fs.copyFileSync(file,path.join('dist',file));
 console.log(`Built dist/index.html with ${sections.length} sections.`);
