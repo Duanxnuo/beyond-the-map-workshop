@@ -98,9 +98,10 @@ body,.site-header,.nav-dropdown,.footer{background:#fff;color:var(--ink)}
 .footer small{border-color:rgba(250,238,238,.2)}
 .footer-star{color:var(--lilac)}
 
-/* Let the page own scrolling while each section heading stays in view. */
-html{scroll-snap-type:none}
-.section{scroll-snap-align:none;min-height:0;align-items:stretch}
+/* Let the page own scrolling, retain gentle section snapping. */
+html{scroll-snap-type:y proximity}
+.section{scroll-snap-align:start;min-height:0;align-items:stretch}
 .section-head{position:sticky;top:110px;align-self:start}
 .section-copy{max-height:none;overflow:visible;overscroll-behavior:auto;padding:7px 0 8px;scrollbar-width:auto}
 @media(max-width:760px){.section-head{top:66px}.section-copy{padding:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-snap-type:none}}
