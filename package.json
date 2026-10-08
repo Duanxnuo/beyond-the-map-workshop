@@ -1,1 +1,1 @@
-{"name":"beyond-the-map-workshop","private":true,"type":"module","scripts":{"build":"node build.mjs","preview":"npx serve dist"}}
+{"name":"reshape-2027-workshop","private":true,"type":"module","scripts":{"build":"node build.mjs","preview":"npx serve dist"}}

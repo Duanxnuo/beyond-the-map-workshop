@@ -10,8 +10,8 @@ if (!heroLines[0]?.startsWith('# ')) throw new Error('content.md must begin with
 const title = heroLines[0].slice(2);
 const subtitle = heroLines[1] ?? '';
 const detail = heroLines[2] ?? '';
-const orbitOne = heroLines.find(line=>line.startsWith('Orbit label 1: '))?.slice('Orbit label 1: '.length) ?? 'EXPLORE / 01';
-const orbitTwo = heroLines.find(line=>line.startsWith('Orbit label 2: '))?.slice('Orbit label 2: '.length) ?? 'DISCOVER / 02';
+const orbitOne = heroLines.find(line=>line.startsWith('Orbit label 1: '))?.slice('Orbit label 1: '.length) ?? 'PROCESS / 01';
+const orbitTwo = heroLines.find(line=>line.startsWith('Orbit label 2: '))?.slice('Orbit label 2: '.length) ?? 'EVIDENCE / 02';
 const ids = {'About':'about','Topics':'topics','Important Dates':'dates','Call for Papers':'cfp','Submission Guidelines':'submission','Speakers':'speakers','Organizers':'organizers','Program':'program','Venue':'venue','FAQ':'faq','Contact':'contact'};
 const labels = {'About':'About','Topics':'Topics','Important Dates':'Important Dates','Call for Papers':'Call for Papers','Submission Guidelines':'Submission Guidelines','Speakers':'Speakers','Organizers':'Organizers','Program':'Program','Venue':'Venue','FAQ':'FAQ','Contact':'Contact'};
 function render(lines) {
