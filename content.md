@@ -4,6 +4,10 @@
 
 Date and location to be announced
 
+Orbit label 1: EXPLORE / 01
+
+Orbit label 2: DISCOVER / 02
+
 ## About
 
 ### When models meet the unknown

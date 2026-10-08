@@ -9,11 +9,12 @@ The event, people, dates, venue, and submission details are placeholders. This i
 Edit only [`content.md`](./content.md) for the main text, dates, speakers, organizers, and program.
 
 - `# Beyond the Map` is the website title. The next two nonempty lines are the subtitle and event details.
+- `Orbit label 1:` and `Orbit label 2:` change the two short labels beside the animated circles in the opening panel. Edit the text after each colon.
 - Each `##` heading identifies a section. Keep these heading names unchanged because the navigation uses them.
 - Tables use vertical bars (`|`). Edit or add rows beneath the header and `---` separator.
 - `**text**` makes text bold. Blank lines separate paragraphs.
 
-Before using the site as a real announcement, replace the placeholder notice, event affiliation, dates, submission portal, speakers, organizers, venue, and contact details. Verify that listed people have agreed to appear.
+Before using the site as a real announcement, confirm the event affiliation, dates, submission portal, speakers, organizers, venue, and contact details. Verify that listed people have agreed to appear.
 
 ## Preview locally
 
