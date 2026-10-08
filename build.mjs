@@ -10,7 +10,6 @@ if (!heroLines[0]?.startsWith('# ')) throw new Error('content.md must begin with
 const title = heroLines[0].slice(2);
 const subtitle = heroLines[1] ?? '';
 const detail = heroLines[2] ?? '';
-const notice = heroLines.find(line => line.startsWith('> '))?.slice(2) ?? '';
 const ids = {'About':'about','Topics':'topics','Important Dates':'dates','Call for Papers':'cfp','Submission Guidelines':'submission','Speakers':'speakers','Organizers':'organizers','Program':'program','Venue':'venue','FAQ':'faq','Contact':'contact'};
 const labels = {'About':'About','Topics':'Topics','Important Dates':'Important Dates','Call for Papers':'Call for Papers','Submission Guidelines':'Submission Guidelines','Speakers':'Speakers','Organizers':'Organizers','Program':'Program','Venue':'Venue','FAQ':'FAQ','Contact':'Contact'};
 function render(lines) {
@@ -43,7 +42,7 @@ const nav=navigationGroups.map(group=>{
   }).join('');
   return `<details class="nav-group"><summary>${group.label}</summary><div class="nav-dropdown">${links}</div></details>`;
 }).join('');
-const body=sections.map(s=>`<section id="${s.id}" class="section reveal"><div class="section-head"><span class="eyebrow">${String(s.index+1).padStart(2,'0')} / ${escape(s.name)}</span><h2>${escape(s.label)}</h2></div><div class="section-copy">${s.html}</div></section>`).join('\n');
-const html=fs.readFileSync('index.template.html','utf8').replaceAll('{{TITLE}}',escape(title)).replaceAll('{{SUBTITLE}}',inline(subtitle)).replaceAll('{{DETAIL}}',inline(detail)).replaceAll('{{NOTICE}}',inline(notice)).replaceAll('{{NAV}}',nav).replaceAll('{{SECTIONS}}',body);
+const body=sections.map(s=>`<section id="${s.id}" class="section reveal"><div class="section-head"><span class="eyebrow">${String(s.index+1).padStart(2,'0')} / ${escape(s.name)}</span><h2>${escape(s.label)}</h2></div><div class="section-copy" tabindex="0" aria-label="${escape(s.label)} content">${s.html}</div></section>`).join('\n');
+const html=fs.readFileSync('index.template.html','utf8').replaceAll('{{TITLE}}',escape(title)).replaceAll('{{SUBTITLE}}',inline(subtitle)).replaceAll('{{DETAIL}}',inline(detail)).replaceAll('{{NAV}}',nav).replaceAll('{{SECTIONS}}',body);
 fs.mkdirSync('dist',{recursive:true});fs.writeFileSync('dist/index.html',html);for(const file of ['style.css','script.js'])fs.copyFileSync(file,path.join('dist',file));
 console.log(`Built dist/index.html with ${sections.length} sections.`);

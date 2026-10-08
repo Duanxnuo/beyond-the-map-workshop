@@ -2,9 +2,7 @@
 
 **A Workshop on Reliable AI for Exploration and Discovery**
 
-July 17, 2027 · Vancouver, Canada · In person
-
-> This is an illustrative website. The event affiliation, dates, venue, speakers, organizers, and submission details below are placeholders and have not been confirmed by any real conference. Replace and verify them before public use.
+Date and location to be announced
 
 ## About
 
@@ -33,13 +31,13 @@ The one-day program is designed around invited talks, contributed presentations,
 
 | Milestone | Date |
 | --- | --- |
-| Submission site opens | March 15, 2027 |
-| Paper submission deadline | May 21, 2027 · 23:59 AoE |
-| Acceptance notification | June 18, 2027 |
-| Camera-ready deadline | July 2, 2027 |
-| Workshop | July 17, 2027 |
+| Submission site opens | To be announced |
+| Paper submission deadline | To be announced |
+| Acceptance notification | To be announced |
+| Camera-ready deadline | To be announced |
+| Workshop | To be announced |
 
-All deadlines use Anywhere on Earth (UTC−12). These dates are examples and must be confirmed before an official call for papers is published.
+The deadline time zone will be announced with the call for papers.
 
 ## Call for Papers
 
@@ -53,44 +51,30 @@ We invite research papers, position papers, system demonstrations, and negative 
 | Position paper | Up to 4 pages of main text | Poster or panel |
 | Demo / reproducibility report | Up to 4 pages of main text | Demo or poster |
 
-References and appendices do not count toward the main-text limit. The proposed proceedings are non-archival. Concurrent or previously published work is intended to be welcome, subject to the policies of other venues and the final workshop call.
+Formatting, page limits, review policy, and publication arrangements will be confirmed with the official call for papers.
 
 ## Submission Guidelines
 
 ### Before you submit
 
-1. Prepare a PDF in a standard two-column academic format, with a title, abstract, and author information on the first page.
-2. Explain the research question, method, limitations, and ethical or societal implications where relevant.
-3. If code or data are available, provide an anonymous or public link and describe what is needed to reproduce the work.
-4. Submit through the official submission platform once its link has been announced. There is no active submission portal for this example site.
-5. The review process, anonymity policy, and publication arrangements will be confirmed only if the workshop is approved.
+1. Explain the research question, method, limitations, and ethical or societal implications where relevant.
+2. If code or data are available, describe what is needed to reproduce the work.
+3. Check the official call for formatting, anonymity, and submission requirements when they are announced.
+4. Submit through the official submission platform once its link is available.
 
-**Submission portal: to be announced.** Please do not send papers to an example contact address.
+**Submission portal: to be announced.**
 
 ## Speakers
 
 ### Invited perspectives
 
-| Name | Affiliation | Proposed topic | Status |
-| --- | --- | --- | --- |
-| Dr. Mira Chen | Northstar AI Lab (fictional) | Learning beyond known distributions | Placeholder; not invited |
-| Prof. Elias Rowan | Meridian University (fictional) | Human guidance in open-world agents | Placeholder; not invited |
-| Dr. Noor Patel | Atlas Research Institute (fictional) | Measuring uncertainty in discovery systems | Placeholder; not invited |
-
-These profiles illustrate the speaker layout only. Replace them with confirmed speakers or mark this section “To be announced” before public use.
+Invited speakers and talk titles will be announced here.
 
 ## Organizers
 
 ### Workshop team
 
-| Name | Affiliation | Role |
-| --- | --- | --- |
-| Lin Zhou | Meridian University (fictional) | Program and schedule |
-| Aisha Rahman | Northstar AI Lab (fictional) | Submissions and reviewing |
-| Mateo Silva | Atlas Research Institute (fictional) | Community and onsite experience |
-| Yuna Park | Horizon Computing Center (fictional) | Communications and website |
-
-All names and institutions above are placeholders. Replace them with real organizers who have agreed to be listed before public use.
+The organizing committee will be announced here.
 
 ## Program
 
@@ -110,30 +94,30 @@ All names and institutions above are placeholders. Replace them with real organi
 | 15:50–16:45 | Panel discussion | What comes next for AI discovery systems? |
 | 16:45–17:00 | Closing | Takeaways and next steps |
 
-This schedule is illustrative. Speakers, room assignments, and final times remain unconfirmed.
+Session times and room assignments will be published when the program is finalized.
 
 ## Venue
 
 ### Location and attendance
 
-**Location:** Vancouver, Canada (example city; exact venue to be announced).
+**Location:** To be announced.
 
-**Attendance:** An in-person format is proposed. Registration, visa information, accessibility arrangements, and any remote participation options will be announced after the host conference is confirmed. Please do not make travel plans based on this example page.
+**Attendance:** Registration, accessibility arrangements, and remote participation details will be announced here.
 
 ## FAQ
 
 ### Common questions
 
-**Can I submit work that is under review elsewhere?** The proposed policy allows it, provided authors follow the other venue’s rules. The final call for papers will confirm this.
+**Can I submit work that is under review elsewhere?** The official call for papers will specify the concurrent submission policy.
 
-**Do I need to submit a paper to attend?** No. Registration details will be announced after the host conference is confirmed.
+**Do I need to submit a paper to attend?** Registration details will be announced here.
 
 **Will the workshop be streamed?** This has not been decided. Remote participation or recordings, if available, will be announced here.
 
-**Will papers be formally published?** The current proposal is for non-archival proceedings. The final publication policy remains to be confirmed.
+**Will papers be formally published?** Publication arrangements will be announced with the call for papers.
 
 ## Contact
 
 ### Stay in touch
 
-The official contact address, submission platform, and host conference link have not yet been confirmed. Add verified contact details here and check all dates and venue information before public use.
+Contact details will be announced here.
