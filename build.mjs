@@ -30,7 +30,19 @@ function render(lines) {
 }
 const sections=blocks.map((block,index)=>{const [heading,...lines]=block.split('\n');const name=heading.trim();const id=ids[name];if(!id)throw new Error(`Unknown section: ${name}`);return {name,id,label:labels[name],index,html:render(lines)};});
 for(const required of Object.keys(ids)) if(!sections.some(s=>s.name===required)) throw new Error(`Missing section: ${required}`);
-const nav=sections.filter(s=>!['Submission Guidelines','Venue','FAQ','Contact'].includes(s.name)).map(s=>`<a href="#${s.id}">${s.label}</a>`).join('');
+const navigationGroups = [
+  {label:'Overview', names:['About','Topics']},
+  {label:'Submissions', names:['Important Dates','Call for Papers','Submission Guidelines']},
+  {label:'People', names:['Speakers','Organizers']},
+  {label:'Event', names:['Program','Venue','FAQ','Contact']}
+];
+const nav=navigationGroups.map(group=>{
+  const links=group.names.map(name=>{
+    const section=sections.find(s=>s.name===name);
+    return `<a href="#${section.id}">${section.label}</a>`;
+  }).join('');
+  return `<details class="nav-group"><summary>${group.label}</summary><div class="nav-dropdown">${links}</div></details>`;
+}).join('');
 const body=sections.map(s=>`<section id="${s.id}" class="section reveal"><div class="section-head"><span class="eyebrow">${String(s.index+1).padStart(2,'0')} / ${escape(s.name)}</span><h2>${escape(s.label)}</h2></div><div class="section-copy">${s.html}</div></section>`).join('\n');
 const html=fs.readFileSync('index.template.html','utf8').replaceAll('{{TITLE}}',escape(title)).replaceAll('{{SUBTITLE}}',inline(subtitle)).replaceAll('{{DETAIL}}',inline(detail)).replaceAll('{{NOTICE}}',inline(notice)).replaceAll('{{NAV}}',nav).replaceAll('{{SECTIONS}}',body);
 fs.mkdirSync('dist',{recursive:true});fs.writeFileSync('dist/index.html',html);for(const file of ['style.css','script.js'])fs.copyFileSync(file,path.join('dist',file));
