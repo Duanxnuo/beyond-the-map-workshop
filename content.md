@@ -89,7 +89,7 @@ The workshop includes one invited keynote on software process research in the ag
 | Organiser | Affiliation | Workshop role |
 | --- | --- | --- |
 | Yuwei Zhang | Institute of Software, Chinese Academy of Sciences, China | Overall chair and primary contact; testing, verification, and process evidence. |
-| Jia Li | Wuhan University, China | Agent workflows, artifacts, and evaluation; China industry liaison. |
+| Zhen Yang | Shandong University, China | Agent workflows, artifacts, and evaluation; China industry liaison. |
 | Yuqi Zhu | Academy of Military Sciences, China | Reliability, trust calibration, and human-in-the-loop thresholds; publicity co-chair. |
 | Zhenpeng Chen | School of Software, Tsinghua University, China | Trustworthy agents and oversight; international liaison. |
 | Wensheng Dou | Institute of Software, Chinese Academy of Sciences; University of Chinese Academy of Sciences, China | Senior advisor on quality assurance; industry liaison. |
