@@ -3,7 +3,29 @@ import path from 'node:path';
 
 const source = fs.readFileSync('content.md', 'utf8').replace(/\r\n/g, '\n');
 const escape = (s) => s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-const inline = (s) => escape(s).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+const inline = (s) => escape(s)
+  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+  .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|mailto:[^\s)]+)\)/g, '<a href="$2">$1</a>');
+const webLink = (url, label) => {
+  if (!/^https:\/\//.test(url)) throw new Error('Chair links must use HTTPS');
+  return `<a href="${escape(url)}">${escape(label)}</a>`;
+};
+function renderChairs(head, rows) {
+  const column = name => head.indexOf(name);
+  for (const name of ['Chair','Affiliation','Role','Photo','Website','Google Scholar','Research']) {
+    if (column(name) < 0) throw new Error(`Missing chair column: ${name}`);
+  }
+  return `<div class="chair-grid">${rows.map(row => {
+    const value = name => row[column(name)] ?? '';
+    const name = value('Chair');
+    const photo = value('Photo');
+    if (!/^assets\/chairs\/[a-z0-9-]+\.(png|jpe?g|webp)$/.test(photo) || !fs.existsSync(photo)) {
+      throw new Error(`Missing or invalid portrait for ${name}: ${photo}`);
+    }
+    const links = [value('Website') && webLink(value('Website'),'Homepage'), value('Google Scholar') && webLink(value('Google Scholar'),'Google Scholar')].filter(Boolean).join('<span aria-hidden="true"> · </span>');
+    return `<article class="chair-card"><img class="chair-photo" src="./${escape(photo)}" alt="Portrait of ${escape(name)}" width="96" height="120" loading="lazy" decoding="async"><div class="chair-info"><h4>${value('Website') ? webLink(value('Website'),name) : escape(name)}</h4><p class="chair-affiliation">${inline(value('Affiliation'))}</p><p class="chair-role">${inline(value('Role'))}</p>${links ? `<div class="chair-links">${links}</div>` : ''}</div><p class="chair-research">${inline(value('Research'))}</p></article>`;
+  }).join('')}</div>`;
+}
 const blocks = source.split(/^## /m);
 const heroLines = blocks.shift().trim().split('\n').filter(Boolean);
 if (!heroLines[0]?.startsWith('# ')) throw new Error('content.md must begin with # title');
@@ -22,7 +44,13 @@ function render(lines) {
     if(line.startsWith('### ')){out.push(`<h3>${inline(line.slice(4))}</h3>`);i++;continue;}
     if(line.startsWith('|')){
       const rows=[];while(i<lines.length && lines[i].trim().startsWith('|')) rows.push(lines[i++].trim().split('|').slice(1,-1).map(x=>x.trim()));
-      if(rows.length>1){const head=rows.shift();if(rows[0]?.every(x=>/^:?-+:?$/.test(x)))rows.shift();out.push(`<div class="table-wrap"><table><thead><tr>${head.map(x=>`<th scope="col">${inline(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(x=>`<td>${inline(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);}continue;
+      if(rows.length>1){
+        const head=rows.shift();
+        if(rows[0]?.every(x=>/^:?-+:?$/.test(x)))rows.shift();
+        if(head.includes('Chair') && head.includes('Photo')) out.push(renderChairs(head,rows));
+        else if(head[0]==='Member' && head[1]==='Affiliation') out.push(`<ul class="committee-list">${rows.map(row=>`<li><span class="committee-name">${inline(row[0])}</span><span class="committee-affiliation">${inline(row[1])}</span></li>`).join('')}</ul>`);
+        else out.push(`<div class="table-wrap"><table><thead><tr>${head.map(x=>`<th scope="col">${inline(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(x=>`<td>${inline(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+      }continue;
     }
     if(/^\d+\. /.test(line)){const items=[];while(i<lines.length && /^\d+\. /.test(lines[i].trim()))items.push(lines[i++].trim().replace(/^\d+\. /,''));out.push(`<ol>${items.map(x=>`<li>${inline(x)}</li>`).join('')}</ol>`);continue;}
     const para=[];while(i<lines.length && lines[i].trim() && !/^(### |\||\d+\. )/.test(lines[i].trim()))para.push(lines[i++].trim());out.push(`<p>${inline(para.join(' '))}</p>`);
@@ -47,4 +75,5 @@ const nav=navigationGroups.map(group=>{
 const body=sections.map(s=>`<section id="${s.id}" class="section reveal"><div class="section-head"><span class="section-number" aria-hidden="true">${String(s.index+1).padStart(2,'0')}</span><h2>${escape(s.label)}</h2></div><div class="section-copy">${s.html}</div></section>`).join('\n');
 const html=fs.readFileSync('index.template.html','utf8').replaceAll('{{TITLE}}',escape(title)).replaceAll('{{SUBTITLE}}',inline(subtitle)).replaceAll('{{DETAIL}}',inline(detail)).replaceAll('{{ORBIT_ONE}}',escape(orbitOne)).replaceAll('{{ORBIT_TWO}}',escape(orbitTwo)).replaceAll('{{NAV}}',nav).replaceAll('{{SECTIONS}}',body);
 fs.mkdirSync('dist',{recursive:true});fs.writeFileSync('dist/index.html',html);for(const file of ['style.css','script.js'])fs.copyFileSync(file,path.join('dist',file));
+fs.cpSync('assets',path.join('dist','assets'),{recursive:true});
 console.log(`Built dist/index.html with ${sections.length} sections.`);

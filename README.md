@@ -2,7 +2,7 @@
 
 The website presents RESHAPE 2027, a workshop at FSE 2027. It uses the existing Morandi palette and responsive layout, with JetBrains Mono for dates and interface labels.
 
-The exact workshop day, invited speaker, programme committee, submission portal, contact address, and room will be added when announced.
+The content follows the 13 October 2026 RESHAPE 2027 proposal. It includes five workshop chairs, the 20-member programme committee, submission policies and the tentative half-day programme. The exact workshop day, invited speaker, submission portal and room will be added when announced.
 
 ## Edit the website content
 
@@ -13,6 +13,15 @@ Edit [`content.md`](./content.md) to change the main text, dates, organisers, sc
 - Each `##` heading identifies a section. Keep the heading names because the navigation uses them.
 - Tables use vertical bars (`|`). Edit or add rows below each header and separator.
 - `**text**` makes text bold. A blank line starts a new paragraph.
+- `[label](https://example.com)` creates a link. Email links use `[email](mailto:email)`.
+
+## Edit the chair photos and details
+
+In `content.md`, find the table below `### Workshop chairs`. Each row is one person. Edit the name, affiliation, role, research summary and links in that row; the website automatically displays a photo card rather than a table.
+
+The `Photo` column is a file path, such as `assets/chairs/yuwei-zhang.png`. To replace a photo, upload the new image into `assets/chairs/` with the same filename. Alternatively, upload a new file and change the path in the Markdown table. Supported extensions are `.png`, `.jpg`, `.jpeg` and `.webp`; use lowercase filenames with letters, numbers and hyphens. Keep the header row intact. `Website` and `Google Scholar` may be left blank.
+
+The table below `### Programme committee` controls the member names and affiliations. Add or remove rows to update the list; it automatically becomes a compact responsive list on the page.
 
 The header and footer use the title and subtitle from `content.md`. The search description is in [`index.template.html`](./index.template.html). The palette and motion are in [`style.css`](./style.css).
 
@@ -38,4 +47,5 @@ The existing site is published at [duanxnuo.github.io/beyond-the-map-workshop](h
 - `style.css`: palette, typography, responsive layout, and motion.
 - `script.js`: mobile navigation and scrolling behavior.
 - `build.mjs`: generates the finished page from Markdown.
+- `assets/chairs/`: the five user-provided chair portraits, published with the site.
 - `dist/`: generated files, recreated by the deployment workflow.

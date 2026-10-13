@@ -1,146 +1,176 @@
 # RESHAPE 2027
 
-**1st International Workshop on Reimagining Software Engineering Processes and Evidence in the Agent Era**
+**1st International Workshop on Reimagining Software Engineering Processes in the Agent Era**
 
 Half-day workshop at FSE 2027 · Shenzhen, China · July 2027
 
 Orbit label 1: PROCESS / 01
 
-Orbit label 2: EVIDENCE / 02
+Orbit label 2: ASSURANCE / 02
 
 ## About
 
-### Reimagining software engineering when code is cheap
+### Reimagining the process in the agent era
 
-Coding agents already produce a non-trivial share of industrial software changes. As the cost of writing code falls, the hard questions move to planning, specifying, verifying, reviewing, and releasing changes. RESHAPE 2027 brings researchers and practitioners together to study the development process itself as the unit of analysis: where bottlenecks move, how team roles and artifacts change, and what evidence is needed to evaluate new ways of working.
+LLM-based coding agents are now used routinely in industrial software development, and agent-authored changes account for a growing share of committed and released code. Established software processes and software quality assurance practices, however, were designed for changes written and reviewed by humans. RESHAPE 2027 asks how teams should specify, implement, verify, review and release software when a candidate change can be produced in minutes.
 
-RESHAPE 2027 is the first edition of this workshop. The half-day, in-person event at FSE 2027 in Shenzhen combines an invited keynote, contributed presentations, an evidence exchange on real process data, and an open working session. Organizers will consolidate the discussion into a public research-roadmap white paper with participants. Expected attendance is 50–70.
+The workshop examines how effort is redistributed across specification, implementation, verification and review; which software artifacts become the durable record of intent; and how quality assurance is organised when the volume of agent-generated code exceeds human review capacity. We treat the software development process itself as the unit of analysis and welcome empirical evidence, negative results and rigorous replications.
+
+The half-day, in-person programme combines an invited keynote, contributed presentations, posters and demonstrations, and an open discussion and working session. Organisers will consolidate the findings into a public roadmap white paper. We expect 50–70 participants from research and practice.
 
 ## Topics
 
-### Questions for the agent era
+### Topics of interest
 
 | Theme | Areas of interest |
 | --- | --- |
-| Process models | Agile, DevOps, test-driven development, code review, agent-native workflows, and verification-first or specification-first processes. |
-| Economics of software production | Shifting cost structures, effort distribution, productivity, and value when code is inexpensive to produce. |
-| Code generation with agents | Repository-level and multi-file changes, tool-integrated and planning-based workflows, test-guided generation, and evaluation beyond benchmarks. |
-| Requirements engineering | Machine-consumable specifications, contracts, acceptance criteria, intent formalisation, ambiguity detection, and traceability. |
-| Testing and verification | Oracles and continuous verification when agent-generated changes exceed human review capacity. |
-| Review and oversight | Review load, automation bias, trust calibration, escalation, and human-in-the-loop thresholds. |
-| Artifacts and lifecycles | Specifications, tests, prompts, agent plans, execution traces, and provenance as managed process artifacts. |
-| Maintenance and evolution | Regeneration versus modification, attribution, licensing, and long-term maintenance of agent-authored code. |
-| Metrics and evidence | Review load, acceptance and rewrite rates, verification cost, rollback, defect escape, datasets, telemetry, longitudinal studies, negative results, and replications. |
-| Practice and organisation | Industrial adoption, legacy-process migration, regulated settings, team structures, and software engineering education. |
+| Software processes and process models | What survives of Agile, DevOps and test-driven development when a change takes minutes rather than days; verification-first and specification-first processes for autonomous agents. |
+| Software economics | How effort and cost are redistributed, and how developer productivity should be measured, when the cost of producing code falls. |
+| Automated code generation with agents | Repository-level and multi-file generation, tool-integrated and planning-based workflows, test-guided generation, and evaluation beyond benchmarks. |
+| Requirements engineering for agents | Machine-consumable specifications and acceptance criteria; intent formalisation, ambiguity detection and requirements traceability as process gates. |
+| Software testing and verification at scale | Test oracles, adequacy strategies and continuous verification when agent-generated code exceeds human review capacity. |
+| Agents as a new software paradigm | Specification, testing, formal verification and runtime monitoring of probabilistic, non-deterministic agent workflows, plans, tool chains and context configurations. |
+| Code review and human oversight | Review load and scrutiny under agent throughput; automation bias, trust calibration and escalation thresholds for human-in-the-loop control. |
+| Artifacts and configuration management | Specifications, test suites, prompts, agent plans and execution traces as first-class software artifacts under configuration management. |
+| Software maintenance and evolution | Regeneration versus modification; provenance, attribution and licensing for code no human wrote. |
+| Process and quality metrics | Review load, acceptance versus rewrite rates, verification cost and defect escape rate; datasets and longitudinal studies beyond velocity. |
+| Industrial practice and organisation | Industrial roll-outs, migration of legacy processes, and regulated or compliance-bound domains. |
 
 ## Important Dates
 
-### Key dates
+### Key milestones
 
 | Milestone | Date |
 | --- | --- |
 | Call for papers | November–December 2026 |
-| Submission deadline | 11 February 2027 |
+| Submissions due | 11 February 2027 |
 | Author notification | 18 March 2027 |
-| Camera-ready deadline | 8 April 2027 |
-| FSE 2027 conference | 12–16 July 2027, Shenzhen, China |
-| RESHAPE workshop | July 2027; exact day and venue to be confirmed |
+| Camera-ready deadline (hard deadline) | 8 April 2027 |
+| FSE 2027 conference | 12–16 July 2027 |
+| RESHAPE workshop | July 2027 · Shenzhen, China |
 
-Deadline times and time zone will be announced with the submission instructions. The exact workshop day and venue will be published when the FSE 2027 schedule is finalized.
+The exact workshop day, room, submission deadline time and time zone will be announced here. A public roadmap white paper will follow the workshop.
 
 ## Call for Papers
 
-### Process evidence, including results that challenge assumptions
+### Evidence that reshapes software engineering
 
-RESHAPE 2027 invites research and practice contributions on software engineering processes in the agent era. We welcome empirical studies, experience reports, design rationales, evaluation notes, early-stage work, process datasets, and industrial evidence. Rigorous negative results and replications are explicitly encouraged.
+We invite research and practice contributions on software engineering processes in the agent era, including empirical studies, experience reports and design rationales. Submissions should offer clear context, a sound methodology and actionable insights. Concise, early-stage and in-progress work is also welcome. Reviewers will be instructed to reward negative results and rigorous replications.
 
-| Submission type | Length, including references | Scope and publication note |
+| Submission type | Length, including references | Contribution and publication policy |
 | --- | --- | --- |
-| Extended abstract | Up to 5 pages | Concise, early-stage, or in-progress work. Extended abstracts will not incur an article processing charge. |
-| Full paper | 5–8 pages | Well-supported research or practice with clear context, methods, and actionable insights. An ACM Open article processing charge may apply; the official call will state the policy. |
-| Presentation only | No proceedings paper | Authors who prefer not to publish may opt to present without a proceedings paper. |
+| Extended abstract | Up to 5 pages | Concise, early-stage or in-progress work. These follow the FSE 2027 guidance for APC-free extended abstracts. |
+| Full paper | 5–8 pages | Well-supported research or practice contributions with clear context, methodology and actionable insights. Full papers may be subject to the ACM Open APC; details will be stated in the call for papers. |
 
-Accepted papers will appear in the FSE 2027 Companion Proceedings in the ACM Digital Library. Authors who prefer not to publish may choose the presentation-only option.
+Accepted papers will appear in the **FSE 2027 Companion Proceedings** in the **ACM Digital Library**. At least one author of each accepted paper must register for the workshop and present in person.
 
 ## Submission Guidelines
 
-### Review and participation
+### Review, selection and participation
 
-1. Submit an anonymised contribution for double-blind review. Each submission will receive at least three programme committee reviews.
-2. Make the research question, context, method, evidence, limitations, and implications for software engineering practice clear.
-3. Review will consider relevance, originality, soundness of evidence, and clarity. Negative findings and rigorous replications are welcome.
-4. Use the official formatting and submission portal once announced. The submission deadline time and time zone will be stated in the call for papers.
-5. At least one author of each accepted paper must register for the workshop and present in person. Remote presentations are supported only in emergencies.
+1. Prepare an anonymised submission for **double-blind review**. Each paper will be reviewed by at least three programme committee members.
+2. State the research question, context, methodology, evidence and limitations clearly, and explain the implications for the software development process.
+3. Follow the appropriate page limit, including references: up to 5 pages for an extended abstract, or 5–8 pages for a full paper.
+4. Reviewers will assess relevance, originality, soundness of the evidence and clarity of presentation. Negative results and rigorous replications are encouraged.
+5. At least one author of an accepted paper must register and present in person. FSE 2027 is an in-person event; remote presentations can only be supported in emergencies.
 
-**Submission portal:** To be announced.
+**Submission portal and formatting instructions:** To be announced with the call for papers.
 
-In accordance with the ACM SIGSOFT conflict-of-interest policy, organisers and their directly supervised students, postdocs, and employees will not submit to this workshop.
+In accordance with the ACM SIGSOFT conflict-of-interest policy, organisers and their directly supervised students, postdocs and employees will not submit papers to this workshop.
 
 ## Speakers
 
 ### Invited keynote
 
-The workshop includes one invited keynote on software process research in the agent era. The speaker, affiliation, and talk title will be announced here.
+The workshop will feature one invited keynote on **software process research in the agent era**, by a senior scholar in software processes and empirical software engineering. The speaker's name, affiliation and talk title will be announced here.
 
 ## Organizers
 
-### Organising committee
+### Workshop chairs
 
-| Organiser | Affiliation | Workshop role |
-| --- | --- | --- |
-| Yuwei Zhang | Institute of Software, Chinese Academy of Sciences, China | Overall chair and primary contact; testing, verification, and process evidence. |
-| Zhen Yang | Shandong University, China | Agent workflows, artifacts, and evaluation; China industry liaison. |
-| Yuqi Zhu | Academy of Military Sciences, China | Reliability, trust calibration, and human-in-the-loop thresholds; publicity co-chair. |
-| Zhenpeng Chen | School of Software, Tsinghua University, China | Trustworthy agents and oversight; international liaison. |
-| Wensheng Dou | Institute of Software, Chinese Academy of Sciences; University of Chinese Academy of Sciences, China | Senior advisor on quality assurance; industry liaison. |
+| Chair | Affiliation | Role | Photo | Website | Google Scholar | Research |
+| --- | --- | --- | --- | --- | --- | --- |
+| Yuwei Zhang | Associate Professor · Institute of Software, Chinese Academy of Sciences, China | Overall chair and primary contact | assets/chairs/yuwei-zhang.png | https://zhangyw.work/ | https://scholar.google.com/citations?hl=en&user=ohszaiAAAAAJ | Software testing and AI for software engineering: LLM-based test generation, program repair, defect prediction and empirical studies of package maintenance. |
+| Yuqi Zhu | Academy of Military Sciences, China | Programme on reliability and trust calibration | assets/chairs/yuqi-zhu.jpg |  |  | Decoding and sampling strategies, uncertainty estimation and selective generation of code. Previously affiliated with Peking University. |
+| Zhen Yang | Assistant Professor · Shandong University, China | Programme on code generation, translation and repair | assets/chairs/zhen-yang.png | https://yz1019117968.github.io/mark.github.io/ | https://scholar.google.com/citations?hl=en&user=QRibmPUAAAAJ | Program comprehension and generation, including code translation, program repair and software testing. |
+| Zhenpeng Chen | Assistant Professor · School of Software, Tsinghua University, China | Programme on trustworthy agents and oversight | assets/chairs/zhenpeng-chen.png | https://chenzhenpeng18.github.io/ | https://scholar.google.com/citations?user=x_MdCmEAAAAJ&hl=en | AI for software engineering and trustworthy AI, with a focus on the safety of LLM-based agents and promptware engineering. |
+| Wensheng Dou | Professor · Institute of Software, Chinese Academy of Sciences; University of Chinese Academy of Sciences, China | Senior advisor on quality assurance; industry liaison | assets/chairs/wensheng-dou.png | https://wsdou.github.io/ | https://scholar.google.com/citations?user=NYHyagEAAAAJ&hl=en | Software quality assurance for foundational software: program analysis, software testing and formal methods for database and distributed systems. |
 
 ### Programme committee
 
-A 14–18 member programme committee spanning software processes, empirical software engineering, testing, LLMs for code, and industry is being formed. Individual membership will be published after invitations are confirmed.
+Our 20-member programme committee spans software processes, empirical software engineering, software testing and analysis, and AI for software engineering.
+
+| Member | Affiliation |
+| --- | --- |
+| Jialun Cao | HKUST / Imperial College London |
+| Wing-Kwong (Ricky) Chan | City University of Hong Kong |
+| Yihong Dong | Shanghai Jiao Tong University |
+| Ian Gorton | Northeastern University |
+| Arif Ali Khan | University of Oulu |
+| Jacky Keung | City University of Hong Kong |
+| Kisub Kim | DGIST |
+| Jia Li | Wuhan University |
+| Jia Li | Tsinghua University |
+| Ze Shi Li | University of Oklahoma |
+| Zheng Li | Queen's University Belfast |
+| Fang Liu | Beihang University |
+| Yan Liu | Concordia University |
+| Chen Lyu | Shandong Normal University |
+| Jiayang Song | Macau University of Science and Technology |
+| Yutian Tang | University of Glasgow |
+| Haoye Tian | Aalto University |
+| Zhengyuan Wei | The Education University of Hong Kong |
+| He Ye | University College London |
+| Jie Zhang | King's College London |
 
 ## Program
 
-### Half-day schedule
+### Half-day programme
 
-| Local time | Session | Format |
+| Local time | Session | Details |
 | --- | --- | --- |
 | 13:30–14:30 | Invited keynote | Software process research in the agent era. |
-| 14:30–15:10 | Paper presentations, session 1 | Two talks; each contribution has 12 minutes for presentation and 8 minutes for moderated Q&A. |
-| 15:10–15:40 | Coffee break | Posters, demonstrations, and informal discussion. |
-| 15:40–16:20 | Paper presentations, session 2 | Two talks with moderated Q&A. |
-| 16:20–17:00 | Evidence exchange | Short presentations of process datasets, telemetry, and negative industrial evidence. |
-| 17:00–17:45 | Open discussion and working session | Research-roadmap discussion and wrap-up. |
+| 14:30–15:10 | Paper presentations · Session 1 | Two talks, each with 12 minutes of presentation and 8 minutes of Q&A. |
+| 15:10–15:40 | Coffee break | Posters, demonstrations and informal discussion. |
+| 15:40–16:20 | Paper presentations · Session 2 | Two talks, each with 12 minutes of presentation and 8 minutes of Q&A. |
+| 16:20–17:20 | Open discussion and working session | Consolidating findings and wrapping up the public roadmap. |
 
-Accepted contribution titles, keynote details, and the room will be published here when available.
+This schedule is tentative. Accepted paper titles, keynote details and the room will be published when the programme is finalised.
 
 ## Venue
 
 ### Shenzhen, China
 
-RESHAPE 2027 is an in-person workshop at FSE 2027. The conference takes place 12–16 July 2027 in Shenzhen, China; the workshop day and room will be announced with the conference schedule.
+RESHAPE 2027 will take place **in person in Shenzhen, China**, during FSE 2027, **12–16 July 2027**. The exact workshop day, room and venue details will be announced with the conference schedule.
 
-Attendance is open to all registered FSE 2027 attendees, with no selection beyond registration. Posters and demonstrations will run during the break. Remote presentations are supported only in emergencies.
+Attendance is open to all FSE 2027 attendees. Posters and demonstrations will run during the break. Registration information and accessibility arrangements will be added here when available.
 
 ## FAQ
 
 ### Common questions
 
-**Do I need to submit a paper to attend?** No. Workshop registration is required, but paper submission is not.
+**Do I need to submit a paper to attend?** No. Attendance is open to all FSE 2027 attendees; registration requirements will be announced with the conference information.
 
-**Are negative results and replications welcome?** Yes. Reviewers will be asked to reward rigorous negative findings and replications.
+**Are negative results and replications welcome?** Yes. Reviewers will be instructed to reward rigorous negative results and replication studies.
 
-**Are submissions double-blind?** Yes. Each submission will receive at least three reviews.
+**Are submissions double-blind?** Yes. Each submission will receive at least three programme committee reviews.
 
-**Will accepted work be published?** Accepted papers will appear in the FSE 2027 Companion Proceedings. Authors may also choose the presentation-only option.
+**What are the page limits?** Extended abstracts may contain up to 5 pages. Full papers may contain 5–8 pages. Both limits include references.
 
-**Will there be an article processing charge?** Extended abstracts will not incur an APC. Full papers may be subject to the ACM Open APC; the call for papers will clarify this.
+**Will accepted papers be published?** Yes. Accepted papers will appear in the FSE 2027 Companion Proceedings in the ACM Digital Library.
 
-**Can I participate remotely?** This is an in-person event. Remote presentations are supported only in emergencies.
+**Will there be an article processing charge?** Extended abstracts follow the FSE 2027 guidance for APC-free publication. Full papers may be subject to the ACM Open APC; details will be stated in the call for papers.
+
+**Can accepted work be presented remotely?** Authors must present in person. Remote presentations can only be supported in emergencies.
+
+**What will come out of the working session?** The organisers will consolidate the workshop findings into a public roadmap white paper.
 
 ## Contact
 
-### Updates and enquiries
+### Get in touch
 
-Yuwei Zhang is the workshop's primary contact. A direct contact address and submission portal will be published with the official call for papers.
+For workshop enquiries, please contact **Yuwei Zhang**, overall chair and primary contact.
 
-Further updates on speakers, the programme committee, and venue will be published here.
+[zhangyuwei@iscas.ac.cn](mailto:zhangyuwei@iscas.ac.cn) · [Yuwei Zhang's homepage](https://zhangyw.work/)
+
+Updates on the submission portal, keynote, exact workshop day and room will be published here.
