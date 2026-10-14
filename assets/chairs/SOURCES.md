@@ -11,4 +11,4 @@ All five portraits currently used on the website were supplied by the workshop o
 | Wensheng Dou | chairs/wensheng-dou.png |
 
 Yuwei Zhang's public contact address is listed on https://zhangyw.work/.
-Affiliations, workshop roles, committee membership, topics, deadlines and programme details follow the organiser-provided RESHAPE2027-Proposal-1013.pdf. The keynote speaker, submission portal, exact workshop day and room remain unannounced in that proposal.
+Affiliations, workshop roles, committee membership, topics, deadlines and programme details follow the organiser-provided v28.pdf (updated on 14 October 2026). David Lo, Mark Harman and Federica Sarro are planned candidates for one keynote, not confirmed speakers. The submission portal, exact workshop day and room remain unannounced in that proposal.
