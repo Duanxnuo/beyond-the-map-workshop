@@ -2,7 +2,7 @@
 
 The website presents RESHAPE 2027, a workshop at FSE 2027. It uses the existing Morandi palette and responsive layout, with JetBrains Mono for dates and interface labels.
 
-The content follows the 13 October 2026 RESHAPE 2027 proposal. It includes five workshop chairs, the 20-member programme committee, submission policies and the tentative half-day programme. The exact workshop day, invited speaker, submission portal and room will be added when announced.
+The content follows the organiser-provided v28.pdf, updated on 14 October 2026. It includes five workshop chairs, the 20-member programme committee, submission policies and the tentative half-day programme. The three keynote candidates are marked as planned; one final speaker will be announced when confirmed. The exact workshop day, submission portal and room will be added when announced.
 
 ## Edit the website content
 

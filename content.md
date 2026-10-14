@@ -82,7 +82,15 @@ In accordance with the ACM SIGSOFT conflict-of-interest policy, organisers and t
 
 ### Invited keynote
 
-The workshop will feature one invited keynote on **software process research in the agent era**, by a senior scholar in software processes and empirical software engineering. The speaker's name, affiliation and talk title will be announced here.
+The workshop will feature one invited keynote on **software process research in the agent era**. The organisers plan to invite one speaker from the following candidates:
+
+| Planned keynote candidate | Affiliation |
+| --- | --- |
+| David Lo | Singapore Management University |
+| Mark Harman | Meta Platforms / University College London |
+| Federica Sarro | University College London |
+
+These are planned candidates; the keynote speaker has not yet been confirmed. The final speaker and talk title will be announced here.
 
 ## Organizers
 
@@ -93,7 +101,7 @@ The workshop will feature one invited keynote on **software process research in 
 | Yuwei Zhang | Associate Professor · Institute of Software, Chinese Academy of Sciences, China | Overall chair and primary contact | assets/chairs/yuwei-zhang.png | https://zhangyw.work/ | https://scholar.google.com/citations?hl=en&user=ohszaiAAAAAJ | Software testing and AI for software engineering: LLM-based test generation, program repair, defect prediction and empirical studies of package maintenance. |
 | Yuqi Zhu | Academy of Military Sciences, China | Programme on reliability and trust calibration | assets/chairs/yuqi-zhu.jpg |  |  | Decoding and sampling strategies, uncertainty estimation and selective generation of code. Previously affiliated with Peking University. |
 | Zhen Yang | Assistant Professor · Shandong University, China | Programme on code generation, translation and repair | assets/chairs/zhen-yang.png | https://yz1019117968.github.io/mark.github.io/ | https://scholar.google.com/citations?hl=en&user=QRibmPUAAAAJ | Program comprehension and generation, including code translation, program repair and software testing. |
-| Zhenpeng Chen | Assistant Professor · School of Software, Tsinghua University, China | Programme on trustworthy agents and oversight | assets/chairs/zhenpeng-chen.png | https://chenzhenpeng18.github.io/ | https://scholar.google.com/citations?user=x_MdCmEAAAAJ&hl=en | AI for software engineering and trustworthy AI, with a focus on the safety of LLM-based agents and promptware engineering. |
+| Zhenpeng Chen | Assistant Professor · School of Software, Tsinghua University, China | Programme on trustworthy agents and oversight | assets/chairs/zhenpeng-chen.png | https://chenzhenpeng18.github.io/ | https://scholar.google.com/citations?user=x_MdCmEAAAAJ&hl=en | Software Engineering for/with AI and Trustworthy AI, including Promptware Engineering (ACM TOSEM 2026). WWW 2019 Best Paper Award and MSR 2023 Distinguished Paper Award. ASE 2027 Review Quality Chair; Internetware 2024 Tool Demo Track Co-Chair; programme committees of ICSE, FSE, ASE, ISSTA, WWW and KDD. |
 | Wensheng Dou | Professor · Institute of Software, Chinese Academy of Sciences; University of Chinese Academy of Sciences, China | Senior advisor on quality assurance; industry liaison | assets/chairs/wensheng-dou.png | https://wsdou.github.io/ | https://scholar.google.com/citations?user=NYHyagEAAAAJ&hl=en | Software quality assurance for foundational software: program analysis, software testing and formal methods for database and distributed systems. |
 
 ### Programme committee
@@ -102,7 +110,6 @@ Our 20-member programme committee spans software processes, empirical software e
 
 | Member | Affiliation |
 | --- | --- |
-| Jialun Cao | HKUST / Imperial College London |
 | Wing-Kwong (Ricky) Chan | City University of Hong Kong |
 | Yihong Dong | Shanghai Jiao Tong University |
 | Ian Gorton | Northeastern University |
@@ -115,6 +122,7 @@ Our 20-member programme committee spans software processes, empirical software e
 | Zheng Li | Queen's University Belfast |
 | Fang Liu | Beihang University |
 | Yan Liu | Concordia University |
+| Yixing Luo | Beijing Institute of Control Engineering |
 | Chen Lyu | Shandong Normal University |
 | Jiayang Song | Macau University of Science and Technology |
 | Yutian Tang | University of Glasgow |
