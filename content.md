@@ -171,8 +171,6 @@ Attendance is open to all FSE 2027 attendees. Posters and demonstrations will ru
 
 **Can accepted work be presented remotely?** Authors must present in person. Remote presentations can only be supported in emergencies.
 
-**What will come out of the working session?** The organisers will consolidate the workshop findings into a public roadmap white paper.
-
 ## Contact
 
 ### Get in touch
